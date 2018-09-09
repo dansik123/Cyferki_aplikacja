@@ -6,6 +6,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,6 +16,9 @@ import javax.swing.JPanel;
 import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.SpringLayout;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 import javax.swing.JTextField;
 import java.awt.Font;
 
@@ -25,7 +29,7 @@ public class PrzypasowywanieCyferek {
 	private drawImage []red;
 	private int liczba;
 	private int obiekty;
-	private JTextField tekst;
+	private JLabel tekst;
 	/**
 	 * Launch the application.
 	 * @wbp.parser.entryPoint
@@ -96,7 +100,7 @@ public class PrzypasowywanieCyferek {
 		controlPanel.add(exit);
 
 		final JPanel koszyk = new JPanel();
-		koszyk.setBounds(szerokosc/2,50,500, 500);
+		koszyk.setBounds(szerokosc/2,100,500, 500);
 		Random rand2 = new Random();
 		int x=5,y=6;
 		red=new drawImage[obiekty];
@@ -116,10 +120,10 @@ public class PrzypasowywanieCyferek {
 		
 		frame.getContentPane().add(koszyk);
 		
-		final JPanel panel = new JPanel();
-		panel.setBounds(0, 0,300, wysokosc-controlPanel.HEIGHT);
-		panel.setBackground(new Color(0, 102, 204));
-		frame.getContentPane().add(panel);
+		drawImage krzaki=new drawImage();
+		krzaki.draw("krzaki2.png", 0, 0);
+		krzaki.setBounds(0, 40,300, wysokosc-controlPanel.HEIGHT);
+		frame.getContentPane().add(krzaki);
 		
 		JButton checkButton = new JButton("Sprawd\u017A");
 		checkButton.addMouseListener(new MouseAdapter() {
@@ -142,22 +146,31 @@ public class PrzypasowywanieCyferek {
 				
 			}
 		});
-		checkButton.setBounds(400, 400, 89, 23);
+		checkButton.setBounds(wysokosc-100,szerokosc/2, 89, 23);
 		frame.getContentPane().add(checkButton);
 		String polecenie;
 		if(liczba>=5)
 		{
-			polecenie="W³ó¿ do koszyka basi "+liczba+" ¿etonów";
+			polecenie="W³ó¿ do koszyka "+liczba+" ¿etonów";
 		}
 		else
 		{
-			polecenie="W³ó¿ do koszyka basi "+liczba+" ¿etony";
+			polecenie="W³ó¿ do koszyka "+liczba+" ¿etony";
 		}
-		tekst = new JTextField(polecenie);
+		Font font=new Font("Arial", Font.PLAIN, 17);
+		Border lineBorder = new LineBorder(Color.ORANGE, 3);
+		tekst = new JLabel(polecenie);
 		tekst.setFont(new Font("Arial", Font.PLAIN, 17));
-		tekst.setBounds(600, 600, 250, 40);
+		tekst.setForeground(Color.GREEN);
+		tekst.setHorizontalAlignment(HorisonatlAligment.center);
+		tekst.setBounds(szerokosc/2, 50, 500, 40);
+		TitledBorder titledBorder;
+		titledBorder=BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.orange), "Zadanie");
+		titledBorder.setTitleJustification(TitledBorder.CENTER);
+		titledBorder.setTitleColor(Color.magenta);
+		tekst.setBorder(titledBorder);
+
 		frame.getContentPane().add(tekst);
-		tekst.setColumns(10);
 		
 		
 		

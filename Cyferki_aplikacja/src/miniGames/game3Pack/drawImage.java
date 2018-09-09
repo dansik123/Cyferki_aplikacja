@@ -44,7 +44,7 @@ public class drawImage extends JComponent{
 	}
     public void paint (Graphics g)
     {
-    	g.drawImage(img, 0, 0, 100,100,null);
+    	g.drawImage(img, 0, 0, img.getWidth(),img.getHeight(),null);
     }
     
     public void draw(String name, int x,int y)
