@@ -133,8 +133,8 @@ public class SzukanieCyferek{
 		    memoCardNumbers[randomPosition] = temp;
 		}
 		//show the cards 
-		int x=100;
-		int y=100;
+		int x=50;
+		int y=150;
 		
 		int h=(((wysokosc-40)/100)+1);
 		int w=((szerokosc/100)+1);
@@ -142,7 +142,7 @@ public class SzukanieCyferek{
 		for(int i=1;i<=20;i++)
 		{
 			image[i-1]=new drawImage();
-			image[i-1].draw("memoNone.png", x, (y*((i-1)%4))+100);
+			image[i-1].draw("memoNone.png", x*2, (y*((i-1)%4))+100);
 			image[i-1].setMemoNumber(memoCardNumbers[i-1]);
 			image[i-1].addMouseListener(new MouseAdapter() 
 	        {
@@ -186,8 +186,9 @@ public class SzukanieCyferek{
 	    						para++;
 	    						if(para==10)
 	    						{
-	    							System.out.println("konec");
+	    							System.out.println("koniec");
 	    							koniec end=new koniec();
+	    							end.start();
 	    						}
 	    					}
 	    					else

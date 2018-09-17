@@ -23,7 +23,7 @@ public class drawImage extends JComponent{
 	private int IsOrNot=0;
 	private static final long serialVersionUID = 1L;
 	private BufferedImage img;
-	private JPanel panel=new JPanel();
+	private JComponent panel=new JPanel();
 	private JComponent com=this;
 	private Point mousePoint;
 	
@@ -37,7 +37,7 @@ public class drawImage extends JComponent{
     	initialize();
     }
 
-	public void getPanel(JPanel panel)
+	public void getJComponent(JComponent panel)
 	{
 		this.panel=panel;
 		

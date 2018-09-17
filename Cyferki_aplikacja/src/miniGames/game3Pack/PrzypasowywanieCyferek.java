@@ -99,8 +99,8 @@ public class PrzypasowywanieCyferek {
 		});
 		controlPanel.add(exit);
 
-		final JPanel koszyk = new JPanel();
-		koszyk.setBounds(szerokosc/2,100,500, 500);
+		drawImage koszykImage=new drawImage();
+		koszykImage.draw("koszyk.png", szerokosc/2, 100);
 		Random rand2 = new Random();
 		int x=5,y=6;
 		red=new drawImage[obiekty];
@@ -111,14 +111,14 @@ public class PrzypasowywanieCyferek {
 		
 		red[i]=new drawImage();
 		red[i].draw("1.png",x,y);
-		red[i].getPanel(koszyk);
+		red[i].getJComponent(koszykImage);
 		frame.getContentPane().add(red[i]);
 		
 		
 		
 		}
 		
-		frame.getContentPane().add(koszyk);
+		frame.getContentPane().add(koszykImage);
 		
 		drawImage krzaki=new drawImage();
 		krzaki.draw("krzaki2.png", 0, 0);
@@ -135,18 +135,18 @@ public class PrzypasowywanieCyferek {
 				}
 				if (ilosc==liczba)
 				{
-					koniec end=new koniec(true);
+					koniec end=new koniec(true,frame);
 					end.start();	
 				}
 				else
 				{
-				koniec end=new koniec(false);
+				koniec end=new koniec(false,frame);
 				end.start();
 				}
 				
 			}
 		});
-		checkButton.setBounds(wysokosc-100,szerokosc/2, 89, 23);
+		checkButton.setBounds(((szerokosc/4)*3)-150,wysokosc-140, 150, 50);
 		frame.getContentPane().add(checkButton);
 		String polecenie;
 		if(liczba>=5)
@@ -162,7 +162,7 @@ public class PrzypasowywanieCyferek {
 		tekst = new JLabel(polecenie);
 		tekst.setFont(new Font("Arial", Font.PLAIN, 17));
 		tekst.setForeground(Color.GREEN);
-		tekst.setHorizontalAlignment(HorisonatlAligment.center);
+		tekst.setHorizontalAlignment(tekst.CENTER);
 		tekst.setBounds(szerokosc/2, 50, 500, 40);
 		TitledBorder titledBorder;
 		titledBorder=BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.orange), "Zadanie");

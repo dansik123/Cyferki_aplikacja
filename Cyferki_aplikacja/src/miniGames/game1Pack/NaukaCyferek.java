@@ -86,7 +86,15 @@ public class NaukaCyferek {
 		exit.setBounds(szerokosc-40, 0, 40, 40);
 		controlPanel.add(exit);
 		
+		drawIcon cyfra=new drawIcon();
+		
 		JButton button = new JButton("1");
+		button.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				
+			}
+		});
 		button.setBounds(buttonWidth, 0+40, buttonWidth, buttonHeight);
 		frame.getContentPane().add(button);
 		

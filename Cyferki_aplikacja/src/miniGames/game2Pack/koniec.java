@@ -3,11 +3,13 @@ package miniGames.game2Pack;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+import miniGames.game3Pack.drawIcon;
+
 public class koniec {
 
 	private JFrame frame;
 	String napis;
-	drawImage obrazek;
+	drawIcon obrazek;
 	/**
 	 * Launch the application.
 	 * @wbp.parser.entryPoint
@@ -39,20 +41,30 @@ public class koniec {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 500, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		frame.getContentPane().setLayout(null);
 		
+		final int szerokosc=frame.getWidth();
+		
 		JLabel elo = new JLabel("witaj swiecie");
-		elo.setBounds(40, 40, 100, 14);
+		elo.setBounds((szerokosc/2)-65, 140, 130, 50);
 		frame.getContentPane().add(elo);
-
 			napis="Brawo wygrywasz";
 			elo.setText(napis);
-			obrazek=new drawImage();
-			obrazek.draw("image.png",100,100);
+			obrazek=new drawIcon();
+			obrazek.draw("image.png",szerokosc/2,25);
 			frame.getContentPane().add(obrazek);
+
+		
+		drawIcon backToMenu = new drawIcon();
+		backToMenu.draw("menu_end.png", (szerokosc/2)-100, 200);
+		frame.getContentPane().add(backToMenu);
+		
+		
+		
+		
 		
 		
 	}
