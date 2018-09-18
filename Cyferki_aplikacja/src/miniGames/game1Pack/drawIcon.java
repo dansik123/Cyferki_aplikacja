@@ -27,7 +27,7 @@ public class drawIcon extends JLabel{
     {
     		img=new ImageIcon(this.getClass().getResource("/"+name));
     		this.setIcon(img);
-    		this.setBounds(x-(img.getIconWidth()/2)-15, y, img.getIconWidth(), img.getIconHeight());
+    		this.setBounds(x, y, img.getIconWidth(), img.getIconHeight());
 	     
     }
     

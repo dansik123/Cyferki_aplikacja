@@ -1,8 +1,13 @@
 package miniGames.game3Pack;
 
+import java.awt.Cursor;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.SpringLayout;
+
+import main.MainMenuRun;
 
 public class koniec {
 
@@ -10,7 +15,9 @@ public class koniec {
 	private  boolean isWin;
 	String napis;
 	drawIcon obrazek;
-	private JFrame poprzedniFrame;
+	private JFrame closeFrame;
+	private drawIcon backToMenu = new drawIcon();
+	private drawIcon end_exit = new drawIcon();
 	/**
 	 * Launch the application.
 	 * @wbp.parser.entryPoint
@@ -31,7 +38,7 @@ public class koniec {
 	public koniec(boolean isWin, JFrame frame2)
 	{
 		this.isWin=isWin;
-		poprzedniFrame=frame2;
+		this.closeFrame=frame2;
 		
 	}
 	
@@ -88,12 +95,34 @@ public class koniec {
 			frame.getContentPane().add(obrazek);
 		}
 		
-		drawIcon backToMenu = new drawIcon();
 		backToMenu.draw("menu_end.png", (szerokosc/2)-100, 170);
+		backToMenu.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				MainMenuRun menu=new MainMenuRun();
+				menu.main(null);
+				frame.dispose();
+				closeFrame.dispose();
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				backToMenu.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			}
+		});
+		
 		frame.getContentPane().add(backToMenu);
 		
-		drawIcon end_exit = new drawIcon();
 		end_exit.draw("exit_end.png", (szerokosc/2)+100, 170);
+		end_exit.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.exit(0);
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				end_exit.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			}
+		});
 		frame.getContentPane().add(end_exit);
 		
 		

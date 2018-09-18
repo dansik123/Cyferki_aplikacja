@@ -5,21 +5,18 @@ import java.awt.Image;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Random;
-
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-
 import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.SpringLayout;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.JTextField;
 import java.awt.Font;
 
 public class PrzypasowywanieCyferek {
@@ -67,9 +64,7 @@ public class PrzypasowywanieCyferek {
 	    frame.setUndecorated(true);
 	    frame.setVisible(true);
 		final int szerokosc=frame.getWidth();
-		int buttonWidth=szerokosc/9;
 		final int wysokosc=frame.getHeight();
-		int buttonHeight=wysokosc/8;
 	    frame.getContentPane().setBounds(0, 0, szerokosc,wysokosc );
 		
 		
@@ -77,7 +72,7 @@ public class PrzypasowywanieCyferek {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel controlPanel = new JPanel();
-		controlPanel.setBounds(0, 0, szerokosc, 50);
+		controlPanel.setBounds(0, 0, szerokosc, 30);
 		controlPanel.setForeground(Color.LIGHT_GRAY);
 		frame.getContentPane().add(controlPanel);
 		SpringLayout sl_panel = new SpringLayout();
@@ -85,7 +80,7 @@ public class PrzypasowywanieCyferek {
 		
 		Image img=new ImageIcon(this.getClass().getResource("/cancel.png")).getImage();
 		exit = new JLabel(new ImageIcon(img));
-		sl_panel.putConstraint(SpringLayout.EAST, exit, -10, SpringLayout.EAST, controlPanel);
+		sl_panel.putConstraint(SpringLayout.EAST, exit, 0, SpringLayout.EAST, controlPanel);
 		exit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {

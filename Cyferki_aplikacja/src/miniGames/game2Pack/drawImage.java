@@ -1,18 +1,9 @@
 package miniGames.game2Pack;
 
-import java.awt.Graphics;
-import java.awt.Point;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.management.timer.Timer;
+
+
 import javax.swing.ImageIcon;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class drawImage extends JLabel{
 

@@ -3,34 +3,21 @@ package miniGames.game2Pack;
 
 import java.awt.Frame;
 import java.awt.Image;
-import java.awt.Point;
-
 import javax.swing.JFrame;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
-
 import java.awt.Color;
 import java.awt.Cursor;
 import javax.swing.JPanel;
 import javax.swing.Timer;
-
 import miniGames.game2Pack.drawImage;
-
 import javax.swing.JLabel;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.geom.AffineTransform;
-import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeEvent;
+
 
 
 public class SzukanieCyferek{
@@ -79,9 +66,7 @@ public class SzukanieCyferek{
 	    frame.setUndecorated(true);
 	    frame.setVisible(true);
 		final int szerokosc=frame.getWidth();
-		int buttonWidth=szerokosc/9;
 		final int wysokosc=frame.getHeight();
-		int buttonHeight=wysokosc/8;
 	    frame.getContentPane().setBounds(0, 0, szerokosc,wysokosc );
 		frame.getContentPane().setLayout(null);
 		
@@ -136,8 +121,6 @@ public class SzukanieCyferek{
 		int x=50;
 		int y=150;
 		
-		int h=(((wysokosc-40)/100)+1);
-		int w=((szerokosc/100)+1);
 		image=new drawImage[20];
 		for(int i=1;i<=20;i++)
 		{
@@ -187,7 +170,7 @@ public class SzukanieCyferek{
 	    						if(para==10)
 	    						{
 	    							System.out.println("koniec");
-	    							koniec end=new koniec();
+	    							koniec end=new koniec(frame);
 	    							end.start();
 	    						}
 	    					}

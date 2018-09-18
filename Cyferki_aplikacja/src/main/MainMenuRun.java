@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 
 import miniGames.game1Pack.NaukaCyferek;
+import miniGames.game1Pack.NaukaCyferekVEng;
 import miniGames.game2Pack.SzukanieCyferek;
 import miniGames.game3Pack.PrzypasowywanieCyferek;
 
@@ -85,5 +86,18 @@ public class MainMenuRun {
 		});
 		runPrzypasowywanieCyferek.setBounds(109, 157, 132, 39);
 		frame.getContentPane().add(runPrzypasowywanieCyferek);
+		
+		JButton naukaCyferekEng = new JButton("W\u0142\u0105cz Przypasowywanie");
+		naukaCyferekEng.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				NaukaCyferekVEng nauka=new NaukaCyferekVEng();
+				nauka.run();
+				frame.dispose();
+			}
+			
+		});
+		naukaCyferekEng.setBounds(109, 200, 132, 39);
+		frame.getContentPane().add(naukaCyferekEng);
 	}
 }

@@ -18,7 +18,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
-public class NaukaCyferek {
+public class NaukaCyferekVEng {
 
 	private JFrame frame;
 	private JLabel exit;
@@ -31,7 +31,7 @@ public class NaukaCyferek {
 	 */
 			public void run() {
 				try {
-					NaukaCyferek window = new NaukaCyferek();
+					NaukaCyferekVEng window = new NaukaCyferekVEng();
 					window.start();
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -98,7 +98,7 @@ public class NaukaCyferek {
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol1.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng1.png",(szerokosc/2)+200,100);
 				
 			}
 		});
@@ -109,7 +109,7 @@ public class NaukaCyferek {
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol2.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng2.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_1.setBounds(2*buttonWidth, 0+60, buttonWidth, buttonHeight);
@@ -119,7 +119,7 @@ public class NaukaCyferek {
 		button_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol4.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng4.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_2.setBounds(buttonWidth, (2*buttonHeight)+60, buttonWidth, buttonHeight);
@@ -129,7 +129,7 @@ public class NaukaCyferek {
 		button_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol3.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng3.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_3.setBounds(0, (2*buttonHeight)+60, buttonWidth, buttonHeight);
@@ -139,7 +139,7 @@ public class NaukaCyferek {
 		button_4.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol5.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng5.png",(szerokosc/2)+200,100);
 			}
 		});
 		
@@ -150,7 +150,7 @@ public class NaukaCyferek {
 		button_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol7.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng7.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_5.setBounds(buttonWidth, (4*buttonHeight)+60, buttonWidth, buttonHeight);
@@ -160,7 +160,7 @@ public class NaukaCyferek {
 		button_6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol6.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng6.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_6.setBounds(0, (4*buttonHeight)+60, buttonWidth, buttonHeight);
@@ -170,7 +170,7 @@ public class NaukaCyferek {
 		button_7.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol9.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng9.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_7.setBounds(buttonWidth, (6*buttonHeight)+60, buttonWidth, buttonHeight);
@@ -180,7 +180,7 @@ public class NaukaCyferek {
 		button_8.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol0.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng0.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_8.setBounds(0, 0+60, buttonWidth, buttonHeight);
@@ -190,7 +190,7 @@ public class NaukaCyferek {
 		button_9.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				cyfra.draw("pol8.png",(szerokosc/2)+200,100);
+				cyfra.draw("eng8.png",(szerokosc/2)+200,100);
 			}
 		});
 		button_9.setBounds(2*buttonWidth, (4*buttonHeight)+60, buttonWidth, buttonHeight);
